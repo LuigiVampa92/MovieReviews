@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movie reviews</string>
+    <string name="api_key">4ba9bf4ca198402cae4e09ba81558bcc</string>
+    <string name="text_button_read_more">READ MORE</string>
+    <string name="text_critics_pick">"  critics pick!  "</string>
+    <string name="text_error">ERROR</string>
+</resources>

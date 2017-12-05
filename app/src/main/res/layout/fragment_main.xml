@@ -1,0 +1,56 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingStart="@dimen/padding_horizontal"
+            android:paddingEnd="@dimen/padding_horizontal"
+            android:paddingTop="@dimen/padding_vertical"
+            android:paddingBottom="@dimen/padding_vertical"
+            android:background="@color/color_background_main"
+            tools:context=".ui.MainFragment"
+            tools:listitem="@layout/layout_movie_review"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/color_primary"
+            android:indeterminateTintMode="src_atop"
+            style="?android:attr/progressBarStyleLarge"
+            android:visibility="gone"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_fetching"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/color_primary"
+            android:indeterminateTintMode="src_atop"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

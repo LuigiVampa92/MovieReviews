@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 26
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "com.luigivampa92.moviereviews"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+kapt {
+    generateStubs = true
+}
+
+def dependeciesVersions = [
+        support      :  '26.1.0',
+        dagger       :  '2.13',
+        rxjava       :  '2.1.0',
+        rxandroid    :  '2.0.1',
+        moxy         :  '1.5.3',
+        retrofit     :  '2.3.0',
+        okhttp       :  '3.8.1',
+        picasso      :  '2.5.2'
+]
+
+def dependeciesVersionsTests = [
+        junit     :  '4.12',
+        runner    :  '1.0.1',
+        espresso  :  '3.0.1'
+]
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    implementation "com.android.support:appcompat-v7:${dependeciesVersions.support}"
+    implementation "com.android.support:recyclerview-v7:${dependeciesVersions.support}"
+    implementation "com.android.support:design:${dependeciesVersions.support}"
+
+    implementation "com.google.dagger:dagger:${dependeciesVersions.dagger}"
+    kapt "com.google.dagger:dagger-compiler:${dependeciesVersions.dagger}"
+
+    implementation "io.reactivex.rxjava2:rxjava:${dependeciesVersions.rxjava}"
+    implementation "io.reactivex.rxjava2:rxkotlin:${dependeciesVersions.rxjava}"
+    implementation "io.reactivex.rxjava2:rxandroid:${dependeciesVersions.rxandroid}"
+
+    implementation "com.arello-mobile:moxy:${dependeciesVersions.moxy}"
+    implementation "com.arello-mobile:moxy-android:${dependeciesVersions.moxy}"
+    implementation "com.arello-mobile:moxy-app-compat:${dependeciesVersions.moxy}"
+    kapt "com.arello-mobile:moxy-compiler:${dependeciesVersions.moxy}"
+
+    implementation "com.squareup.retrofit2:retrofit:${dependeciesVersions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${dependeciesVersions.retrofit}"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${dependeciesVersions.retrofit}"
+    implementation "com.squareup.okhttp3:okhttp:${dependeciesVersions.okhttp}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${dependeciesVersions.okhttp}"
+
+    implementation "com.squareup.picasso:picasso:${dependeciesVersions.picasso}"  // todo glide
+
+    testImplementation "junit:junit:${dependeciesVersionsTests.junit}"
+    androidTestImplementation "com.android.support.test:runner:${dependeciesVersionsTests.runner}"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:${dependeciesVersionsTests.espresso}"
+}

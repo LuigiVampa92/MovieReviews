@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_vertical">16dp</dimen>
+    <dimen name="padding_horizontal">16dp</dimen>
+    <dimen name="padding_element_large">24dp</dimen>
+    <dimen name="separator_height">1dp</dimen>
+    <dimen name="separator_margin">5dp</dimen>
+    <dimen name="review_image_height">210dp</dimen>
+    <dimen name="font_size_big">16sp</dimen>
+    <dimen name="font_size_normal">12sp</dimen>
+</resources>

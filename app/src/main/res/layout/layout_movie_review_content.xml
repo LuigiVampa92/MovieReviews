@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_review_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/movie_review_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/review_image_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/icon_placeholder_nytimes"
+        tools:ignore="ContentDescription"
+        />
+
+    <TextView
+        android:id="@+id/movie_review_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/movie_review_image"
+        android:layout_marginTop="@dimen/padding_vertical"
+        android:layout_marginStart="@dimen/padding_horizontal"
+        android:textStyle="normal"
+        android:textSize="@dimen/font_size_big"
+        />
+
+    <View
+        android:id="@+id/movie_review_separator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_height"
+        android:layout_below="@id/movie_review_title"
+        android:layout_marginTop="@dimen/separator_margin"
+        android:layout_marginBottom="@dimen/separator_margin"
+        android:layout_marginStart="@dimen/padding_horizontal"
+        android:layout_marginEnd="@dimen/padding_horizontal"
+        android:background="@color/color_separator"
+        />
+
+    <TextView
+        android:id="@+id/movie_review_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/movie_review_separator"
+        android:layout_marginTop="@dimen/padding_vertical"
+        android:layout_marginEnd="@dimen/padding_horizontal"
+        android:textStyle="normal"
+        android:textSize="@dimen/font_size_normal"
+        />
+
+    <TextView
+        android:id="@+id/movie_review_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/movie_review_date"
+        android:layout_marginTop="@dimen/padding_vertical"
+        android:layout_marginStart="@dimen/padding_horizontal"
+        android:layout_marginEnd="@dimen/padding_horizontal"
+        android:textStyle="normal"
+        android:textSize="@dimen/font_size_normal"
+        />
+
+    <TextView
+        android:id="@+id/movie_review_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/movie_review_text"
+        android:layout_marginTop="@dimen/padding_vertical"
+        android:layout_marginStart="@dimen/padding_horizontal"
+        android:layout_marginEnd="@dimen/padding_horizontal"
+        android:textStyle="normal"
+        android:textSize="@dimen/font_size_normal"
+        />
+
+    <Button
+        android:id="@+id/button_show_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/movie_review_description"
+        android:layout_marginTop="@dimen/padding_vertical"
+        android:layout_marginBottom="@dimen/padding_vertical"
+        android:layout_marginStart="@dimen/padding_horizontal"
+        android:layout_marginEnd="@dimen/padding_horizontal"
+        android:background="@android:color/transparent"
+        android:textStyle="normal"
+        android:textColor="@color/color_accent"
+        android:textSize="@dimen/font_size_big"
+        android:text="@string/text_button_read_more"
+        />
+
+    <LinearLayout
+        android:id="@+id/tags_container"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_show_more"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/padding_vertical"
+        android:layout_marginStart="@dimen/padding_horizontal"
+        >
+
+        <TextView
+            android:id="@+id/movie_review_tag_critpick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_horizontal"
+            android:background="@color/color_background_tag"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"
+            android:text="@string/text_critics_pick"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/movie_review_tag_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_background_tag"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+</merge>

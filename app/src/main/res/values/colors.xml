@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#bf6f14</color>
+    <color name="color_primary_dark">#684512</color>
+    <color name="color_accent">#4caf50</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_separator">#DDDDDD</color>
+    <color name="color_background_main">#DDDDDD</color>
+    <color name="color_background_card">#FFFFFF</color>
+    <color name="color_background_tag">#AAAAAA</color>
+</resources>
